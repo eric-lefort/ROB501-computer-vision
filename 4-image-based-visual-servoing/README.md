@@ -14,7 +14,7 @@ In this assignment, you will implement an Image-Based Visual Servoing (IBVS) con
 
 2. **Part 2: Image-Based Servo Controller**
    - Implement a proportional controller in `ibvs_controller.py` that calculates camera velocities using the Jacobian matrix and a Moore-Penrose pseudo-inverse.
-   - ![Video](../assets/video/ibvs_jac_controller.webm)
+   - <video width=480 src="../assets/video/ibvs_jac_controller.webm">
 
 3. **Part 3: Depth Estimation**
    - Implement a function in `ibvs_depth_finder.py` to estimate new depths for feature points based on camera velocity and changes in image feature positions.
