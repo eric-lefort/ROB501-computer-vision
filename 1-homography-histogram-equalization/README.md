@@ -10,6 +10,14 @@
 
 In this assignment, you will explore essential concepts in computer vision, including perspective transformations, bilinear interpolation, and histogram equalization. Using these techniques, you will replace a portion of an image with another image to simulate a "billboard hack," ensuring that the insertion appears natural and adheres to the appropriate geometric and photometric properties.
 
+![Yonge-Dundas square](images/yonge_dundas_square.jpg)
+
+![University of Toronto Soldiers Tower](images/uoft_soldiers_tower_light.png)
+
+Result:
+![Resulting image](templates/billboard_hacked.png)
+
+
 ### Submission Details
 - **Due Date**: Friday, October 4, 2024, by 11:59 p.m. EDT
 - **Submission Platform**: Autolab

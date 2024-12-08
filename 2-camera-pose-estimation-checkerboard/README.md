@@ -41,7 +41,13 @@ Ensure your code is properly commented and adheres to the provided templates. Su
    Solve the Perspective-n-Points (PnP) problem using nonlinear least squares to estimate the camera pose.
 
 ---
+Some results
 
+Cross-Junction Detection:
+![](images/output/01.png)
+![](images/output/02.png)
+
+---
 ### Resources
 
 1. Lecture Notes and Slides
