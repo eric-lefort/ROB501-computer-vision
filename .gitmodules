@@ -1,0 +1,3 @@
+[submodule "liegroups"]
+	path = liegroups
+	url = git@github.com:utiasSTARS/liegroups.git

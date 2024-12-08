@@ -1,0 +1,102 @@
+Base init, approximate depth
+Best sampled gain: 0.9891612160261924, 	n interations: 7
+Hard init 1, approximate depth
+Best sampled gain: 0.5345006189651123, 	n interations: 25
+Hard init 2, approximate depth
+Best sampled gain: 0.16993042058779403, 	n interations: 60
+Hard init 3, approximate depth
+Best sampled gain: 0.14896475111051696, 	n interations: 53
+Base init, approximate depth
+Best sampled gain: 0.9760423829356182, 	n interations: 7
+Hard init 1, approximate depth
+Best sampled gain: 0.6307204037589629, 	n interations: 22
+Hard init 2, approximate depth
+Best sampled gain: 0.14767343462564933, 	n interations: 52
+Hard init 3, approximate depth
+Best sampled gain: 0.2, 	n interations: 150
+Base init, approximate depth
+Best sampled gain: 1.0225243910733588, 	n interations: 7
+Hard init 1, approximate depth
+Best sampled gain: 0.8, 	n interations: 150
+Hard init 2, approximate depth
+Best sampled gain: 0.15614428241506967, 	n interations: 56
+Hard init 3, approximate depth
+Best sampled gain: 0.15779897942309265, 	n interations: 64
+Base init, approximate depth
+Best sampled gain: 1.0295303947843144, 	n interations: 7
+Hard init 1, approximate depth
+Best sampled gain: 0.8, 	n interations: 150
+Base init, approximate depth
+Best sampled gain: 1.0069151227097728, 	n interations: 7
+Base init, approximate depth
+Best sampled gain: 0.9853728105619131, 	n interations: 7
+Base init, approximate depth
+Best sampled gain: 1.087532346081788, 	n interations: 8
+Hard init 1, approximate depth
+Best sampled gain: 0.8, 	n interations: 150
+Base init, approximate depth
+Best sampled gain: 0.9968356858942774, 	n interations: 7
+Hard init 1, approximate depth
+Best sampled gain: 0.7083719566346395, 	n interations: 18
+Hard init 2, approximate depth
+Best sampled gain: 0.16042107696805574, 	n interations: 63
+Hard init 3, approximate depth
+Best sampled gain: 0.14851772263555277, 	n interations: 50
+Base init, approximate depth
+Best sampled gain: 1.0085759695342174, 	n interations: 7
+Base init, approximate depth
+Best sampled gain: 0.997322627353399, 	n interations: 7
+Base init, approximate depth
+Best sampled gain: 1.0163140479287958, 	n interations: 7
+Hard init 1, approximate depth
+Best sampled gain: 0.7737594184611056, 	n interations: 15
+Hard init 2, approximate depth
+Best sampled gain: 0.14853806019146393, 	n interations: 50
+Hard init 1, approximate depth
+Best sampled gain: 0.775303405067353, 	n interations: 16
+Hard init 2, approximate depth
+Best sampled gain: 0.17646502469490263, 	n interations: 54
+Hard init 1, approximate depth
+Best sampled gain: 0.5248939091284772, 	n interations: 25
+Hard init 2, approximate depth
+Best sampled gain: 0.14810809853401208, 	n interations: 52
+Hard init 1, approximate depth
+Best sampled gain: 0.6979835973176649, 	n interations: 20
+Hard init 2, approximate depth
+Best sampled gain: 0.1485377445494379, 	n interations: 50
+Hard init 3, approximate depth
+Best sampled gain: 0.14866541786132417, 	n interations: 49
+Hard init 1, approximate depth
+Best sampled gain: 0.7930858161373667, 	n interations: 20
+Hard init 2, approximate depth
+Best sampled gain: 0.14874707958829456, 	n interations: 48
+Base init, approximate depth
+Best sampled gain: 1.004557870875813, 	n interations: 6
+Hard init 1, approximate depth
+Best sampled gain: 0.6516860315575309, 	n interations: 20
+Hard init 2, approximate depth
+Best sampled gain: 0.1486187052682958, 	n interations: 48
+Hard init 3, approximate depth
+Best sampled gain: 0.14762763288472047, 	n interations: 51
+Base init, approximate depth
+Best sampled gain: 1.0027065855844584, 	n interations: 6
+Hard init 1, approximate depth
+Best sampled gain: 0.6908374566351083, 	n interations: 19
+Hard init 2, approximate depth
+Best sampled gain: 0.09567339090605737, 	n interations: 88
+Hard init 3, approximate depth
+Best sampled gain: 0.1391611540644521, 	n interations: 65
+Base init, known depth
+Best sampled gain: 1.0562841005410974, 	n interations: 5
+Hard init 1, known depth
+Best sampled gain: 0.55161097358372, 	n interations: 17
+Hard init 2, known depth
+Best sampled gain: 0.10757435476108304, 	n interations: 101
+Hard init 3, known depth
+Best sampled gain: 0.10458730817813663, 	n interations: 91
+Hard init 3, known depth
+Best sampled gain: 0.1549850758542962, 	n interations: 85
+Hard init 3, known depth
+Best sampled gain: 0.18973406640698198, 	n interations: 58
+Hard init 3, approximate depth
+Best sampled gain: 0.14898965898796027, 	n interations: 52
