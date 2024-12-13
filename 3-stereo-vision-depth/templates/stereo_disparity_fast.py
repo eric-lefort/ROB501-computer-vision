@@ -36,6 +36,7 @@ def stereo_disparity_fast(Il, Ir, bbox, maxd):
     #
     #  - Optimize for runtime AND for clarity.
 
+    # inital results with different window sizes
     # (size, %error)
     # (15, 0.14)
     # (13, 0.14)
@@ -44,55 +45,44 @@ def stereo_disparity_fast(Il, Ir, bbox, maxd):
     # (7, 0.17)
     # (5, 0.21)
 
+    imshape = Il.shape
+
     w_size = 11
     w_half = w_size // 2
 
-    x_range = bbox[0, :]
-    y_range = bbox[1, :]
-
-    print(Il.shape)
-    print(bbox)
+    # pad the image with half the window size, such that a window centered at any 
+    # point on the original image is completely contained by the padded image
+    pad = w_half
+    x_range = bbox[0, :] + pad
+    y_range = bbox[1, :] + pad
 
     Id = np.zeros_like(Il)
-    for i in range(x_range[0], x_range[1] + 1):
-        for j in range(y_range[0], y_range[1] + 1):
-            x_lo = i - w_half
-            x_hi = i + w_half + 1
-            y_lo = j - w_half
-            y_hi = j + w_half + 1
+    Il = np.pad(Il, pad_width=((pad, pad), (pad, pad)), mode='edge') / 255
+    Ir = np.pad(Ir, pad_width=((pad, pad), (pad, pad)), mode='edge') / 255
 
-            window_left = Il[y_lo:y_hi, x_lo:x_hi] / 255
+    for i in range(y_range[0], y_range[1] + 1):
+        for j in range(x_range[0], x_range[1] + 1):
+            x_lo = j
+            x_hi = j + w_size
+            y_lo = i
+            y_hi = i + w_size
+
+            window_left = Il[y_lo:y_hi, x_lo:x_hi]
             
-            # scan for match in right window
-            min_err = float('inf')
-            for offset in range(maxd):
-                # print((x_lo - offset), (x_hi - offset))
-                if (x_lo - offset < 0):
-                    break
-                window_right = Ir[y_lo:y_hi, (x_lo - offset) : (x_hi - offset)] / 255
-                cur_err = sum_absolute_diff(window_left, window_right)
-                if cur_err < min_err:
-                    d = offset
-                    min_err = cur_err
+            # generate all shifted windows (for all disparities)
+            right_windows = np.stack([
+                Ir[i:i+w_size, j-d:j-d+w_size] if j-d >= 0 else np.full((w_size, w_size), np.inf)
+                for d in range(maxd + 1)
+            ], axis=0)  # Shape: (maxd+1, w_size, w_size)
 
-                # err.append((offset, sum_absolute_diff(window_left, window_right)))
+            # compute SAD for each window
+            sad = np.sum(np.abs(right_windows - window_left), axis=(1, 2))
 
-            Id[j, i] = d 
-            # draw = Il
-            # draw[j, i] = 0
-            # plt.imshow(draw)
-            # plt.show()
-            # plt.imshow(Ir)
-            # plt.show()
-            # plt.scatter(np.array(err)[:, 0], np.array(err)[:, 1])
-            # plt.show()
+            Id[i, j] = np.argmin(sad)
 
-    correct = isinstance(Id, np.ndarray) and Id.shape == Il.shape
+    correct = isinstance(Id, np.ndarray) and Id.shape == imshape
     
     if not correct:
         raise TypeError("Wrong type or size returned!")
 
     return Id
-
-def sum_absolute_diff(im1, im2):
-    return np.sum(np.abs(im1 - im2))

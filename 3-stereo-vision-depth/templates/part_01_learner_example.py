@@ -20,3 +20,15 @@ N, rms, pbad = stereo_disparity_score(It, Id, bbox)
 print("Valid pixels: %d, RMS Error: %.2f, Percentage Bad: %.2f" % (N, rms, pbad))
 plt.imshow(Id, cmap = "gray")
 plt.show()
+
+
+
+Il = imread("../images/teddy/teddy_image_02.png", mode='F')
+Ir = imread("../images/teddy/teddy_image_06.png", mode='F')
+It = imread("../images/teddy/teddy_disp_02.png", mode='F')/4.0
+bbox = np.load("../data/teddy_02_bounds.npy")
+Id = stereo_disparity_fast(Il, Ir, bbox, 55)
+N, rms, pbad = stereo_disparity_score(It, Id, bbox)
+print("Valid pixels: %d, RMS Error: %.2f, Percentage Bad: %.2f" % (N, rms, pbad))
+plt.imshow(Id, cmap = "gray")
+plt.show()

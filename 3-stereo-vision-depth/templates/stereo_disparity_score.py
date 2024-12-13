@@ -32,13 +32,19 @@ def stereo_disparity_score(It, Id, bbox):
     Id = Id.astype(np.float64)
     It = It.astype(np.float64)
 
+    # difference = np.abs(Id - It)  # Take the absolute difference to avoid negative values
+
+    # Display the difference using imshow
+    # plt.imshow(difference, cmap='gray')
+    # plt.colorbar()  # Optional: Add a colorbar to show the intensity scale
+    # plt.title('Absolute Difference between Id and It')
+    # plt.show()
+
     # Cut down the mask to only consider pixels in the box...
     mask[:, :bbox[0, 0]] = 0
     mask[:, bbox[0, 1] + 1:] = 0
     mask[:bbox[1, 0], :] = 0
     mask[bbox[1, 1] + 1:, :] = 0
-    # plt.imshow(mask, cmap = "gray")
-    # plt.show()
 
     N = np.sum(mask)  # Total number of valid pixels.
     rms = np.sqrt(np.sum(np.square(Id[mask] - It[mask]))/N)

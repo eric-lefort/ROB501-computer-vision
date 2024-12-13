@@ -13,6 +13,14 @@ Stereo vision is crucial for many robotics tasks as it provides dense depth and 
 - Understand stereo block matching and the complexities of block-based processing.
 - Gain experience with more advanced methods for stereo depth estimation.
 
+The algorithm we use uses a very simple line search for the best match (using a sum-of-absolute-difference metric) over a small window. Despite its simplicity, it provides decent results after some simple filtering.
+
+Example data and ground truth
+| left | right | ground truth | our output |
+|-|-|-|-|
+|![](images/cones/cones_image_02.png) | ![](images/cones/cones_image_06.png) | ![](images/cones/cones_disp_02.png) | ![](images/cones/cones_output.png) |
+
+
 ### Submission Details
 
 - **Due Date**: Monday, November 11, 2024, by 11:59 p.m. EDT
@@ -53,6 +61,10 @@ You will use stereo image pairs from:
 - [ ] `secret_id.py`
 - [ ] `stereo_disparity_fast.py`
 - [ ] `stereo_disparity_best.py`
+
+```
+tar cvf code.tar secret_id.py stereo_disparity_best.py stereo_disparity_fast.py stereo_disparity_score.py
+```
 
 Include clear comments and ensure compatibility with the Autolab testing suite. Be concise and accurate, and ensure your code runs within the specified runtime limits.
 
